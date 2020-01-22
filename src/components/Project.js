@@ -4,7 +4,7 @@ import { MdDelete } from "react-icons/md"
 import { FaCode } from "react-icons/fa"
 import firebase from './firebase'
 import  { Link } from '@reach/router'
-import parse from 'html-react-parser'
+// import parse from 'html-react-parser'
 
 
 const Project = (props) => {
@@ -30,16 +30,23 @@ const Project = (props) => {
             }
             <h1>{props.data.title}</h1>
            
-            <div>
-                {
-                props.data.description && 
-                parse(props.data.description) 
-                }
+            <div className='year'>
+                {props.data.year}
+
             </div>
+
+            <div className='byline'>
+                {props.data.byline}
+
+            </div>
+
+            <Link to={'/projects/' + props.id}>Read more</Link>
            
             {
                props.data.color && <p>farge: {props.data.color}</p>
-            }            
+            }       
+
+
             {
             props.signedIn &&
             <div className='admin-icons'>

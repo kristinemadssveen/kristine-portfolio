@@ -11,7 +11,7 @@
     left:0;
     top:10vh;
     height:5vh;
-    background:#eee;
+    background:rgb(115, 183, 228);
     display:grid;
     place-items:center;
     z-index:1;
