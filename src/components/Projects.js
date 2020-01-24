@@ -32,6 +32,7 @@ const Projects = (props) => {
 
     return(
         <main>
+
             {
                 props.signedIn &&
                 <div className='add'>

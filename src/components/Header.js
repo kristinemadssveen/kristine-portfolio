@@ -7,6 +7,14 @@ const Header = ( props ) => {
 
     const [show, setShow] = useState(false)
 
+    const isPartiallyActive = ({
+        isPartiallyCurrent
+    }) => {
+        return isPartiallyCurrent
+        ? { className: 'active' }
+        : null
+    }
+
     return(
 
         <div className='header-container'>
@@ -15,7 +23,7 @@ const Header = ( props ) => {
 
         <header className= { show ? 'visible' : '' } onClick={ () => setShow(false) }>
             
-            <Link to='/'>prosjekter</Link>
+            <Link getProps={isPartiallyActive} to='/projects'>prosjekter</Link>
             <Link to='/contact'>kontakt</Link>
             <Link to='/login'>
                 {

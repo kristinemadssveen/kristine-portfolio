@@ -1,7 +1,39 @@
 
 
-.om-meg {
+.navn {
     color: #383838;
-    padding-top: 150px;
+    padding-top: 120px;
+    padding-bottom: 70px;
     z-index: 1;
+    text-align: center;
+    font-size: 23px;
+    font-weight: 100;
+}
+
+.mads {
+    color: #3FEBAF;
+}
+
+
+.om-meg {
+    padding-bottom: 70px;
+    text-align: center;
+    padding-left: 20rem;
+    padding-right: 20rem;
+    color: #383838;
+}
+
+h3 {
+    font-size: 19px;
+}
+
+p {
+    font-size: 14px;
+}
+
+@media (max-width: 1000px) {
+    .om-meg {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
 }

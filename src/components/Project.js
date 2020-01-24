@@ -22,8 +22,8 @@ const Project = (props) => {
         }
     }
 
-    return(
-        <div onClick={()=>setActiveProject(!activeProject)} className={activeProject ? 'project active' : 'project'}>
+    return(                                
+        <div className='project' onClick={()=>setActiveProject(!activeProject)} className={activeProject ? 'project active' : 'project'}>
             {
                 props.data.defaultImage &&
                 <img src={props.data.defaultImage} alt='default' />

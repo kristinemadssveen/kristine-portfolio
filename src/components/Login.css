@@ -1,7 +1,14 @@
-main.login{
+
+.login {
+    text-align: center;
+}
+
+.login button {
+    
 }
 
 .login img{
     width:200px;
     margin-bottom:1rem;
+
 }

@@ -30,8 +30,9 @@ header a {
     
 }
 
-[aria-current='page'] {
+[aria-current='page'], .active {
     font-weight: bold;
+    color: #3FEBAF;
 }
 
 @media (max-width: 1000px) {
@@ -42,7 +43,7 @@ header a {
         grid-auto-flow: row;
         align-content: center;
         min-height: 100vh;
-        transition: .9s ease;
+        transition: .4s ease;
     }
 
     header a {

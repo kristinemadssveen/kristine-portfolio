@@ -7,6 +7,7 @@
 
 main {
   background-color: #FAFAFA;
+  padding: 50px;
 }
 
 .add {
@@ -27,13 +28,13 @@ main {
   display: -ms-flexbox;
   /* Not needed if autoprefixing */
   display: flex;
-  margin-left: -30px;
+  margin-left: -5px;
   /* gutter size offset */
   width: auto;
 }
 
 .my-masonry-grid_column {
-  padding-left: 30px;
+  padding-left: 20px;
   /* gutter size */
   background-clip: padding-box;
 }
