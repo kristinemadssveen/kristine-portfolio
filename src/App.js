@@ -8,6 +8,9 @@ import Header from './components/Header'
 import Login from './components/Login'
 import Edit from './components/Edit'
 import firebase from './components/firebase'
+import Om from './components/Om.js'
+
+
 
 const Default = () => {
   navigate('/projects')
@@ -42,6 +45,7 @@ const App = () => {
         <ProjectDetails path='/projects/:id' />
         <Login signedIn={signedIn} setSignedIn={setSignedIn} path='/login' />
         <Edit path='/edit/:id' />
+        <Om />
       </Router>
 
     </div>

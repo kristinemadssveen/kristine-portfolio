@@ -11,16 +11,16 @@ const Header = ( props ) => {
 
         <div className='header-container'>
 
-        <MdMenu className='burger' color='black' size='32' onClick={ () => setShow(!show) } />
+        <MdMenu className='burger' color='darkgray' size='32' onClick={ () => setShow(!show) } />
 
         <header className= { show ? 'visible' : '' } onClick={ () => setShow(false) }>
             
-            <Link to='/'>projects</Link>
+            <Link to='/'>prosjekter</Link>
             <Link to='/contact'>kontakt</Link>
             <Link to='/login'>
                 {
                 props.signedIn 
-                ? 'profile'
+                ? 'profil'
                 : 'login'
                 }
             </Link>

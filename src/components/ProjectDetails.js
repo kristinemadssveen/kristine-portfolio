@@ -1,7 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import './Project.css'
 import firebase from './firebase'
-import  { Link } from '@reach/router'
 import parse from 'html-react-parser'
 
 
@@ -17,7 +16,7 @@ const ProjectDetails = (props) => {
         .onSnapshot(
             snapshot => setProject(snapshot.data())
         )
-    }, [])
+    }, [props.id])
 
     return(
 

@@ -2,7 +2,7 @@
     position: fixed;
     width: 100vw;
     height: 10vh;
-    background: rgb(66, 125, 235);
+    background: #fafafa;
     display: grid;
     z-index: 2;
     place-items: center;
@@ -26,7 +26,8 @@ header {
 
 header a {
     text-decoration: none;
-    color: rgb(193, 227, 243);
+    color: #383838;
+    
 }
 
 [aria-current='page'] {
@@ -36,7 +37,7 @@ header a {
 @media (max-width: 1000px) {
     header {
         width: 100%;
-        background-color: black;
+        background-color: #383838;
         transform:translateY(-100%);
         grid-auto-flow: row;
         align-content: center;
@@ -46,7 +47,7 @@ header a {
 
     header a {
         font-size: 2rem;
-        
+        color: #fafafa;
     }
 
     header.visible {

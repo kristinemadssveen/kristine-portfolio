@@ -2,7 +2,7 @@ import React,{ useState, useEffect } from 'react'
 import firebase from './firebase'
 import Project from './Project'
 import './Projects.css'
-import { IoIosAddCircle } from 'react-icons/io'
+import { MdAddCircleOutline } from 'react-icons/md'
 import {navigate} from '@reach/router'
 import ClipLoader from "react-spinners/ClipLoader"
 import Masonry from 'react-masonry-css'
@@ -13,7 +13,7 @@ const Projects = (props) => {
     const addProject = () => {
         firebase.firestore().collection('projects').add(
             {
-                title:'0 New project',
+                title:'0 Nytt prosjekt',
                 timestamp: firebase.firestore.FieldValue.serverTimestamp()
             }
         )
@@ -35,7 +35,7 @@ const Projects = (props) => {
             {
                 props.signedIn &&
                 <div className='add'>
-                    <IoIosAddCircle className='edit-icons' onClick={addProject} />
+                    <MdAddCircleOutline className='edit-icons' color='#383838' onClick={addProject} />
                 </div>
             }
 

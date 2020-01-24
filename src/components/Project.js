@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import './Project.css'
-import { MdDelete } from "react-icons/md"
-import { FaCode } from "react-icons/fa"
+import { AiOutlineDelete } from "react-icons/ai"
+import { FiEdit3 } from "react-icons/fi"
 import firebase from './firebase'
 import  { Link } from '@reach/router'
 // import parse from 'html-react-parser'
@@ -51,9 +51,9 @@ const Project = (props) => {
             props.signedIn &&
             <div className='admin-icons'>
                 <Link to={'/edit/' + props.id}>
-                    <FaCode className='edit-icons' />
+                    <FiEdit3 className='edit-icons' color='#383838' />
                 </Link>            
-                <MdDelete onClick={deleteProject} className='edit-icons' />
+                <AiOutlineDelete onClick={deleteProject} className='edit-icons' color='#383838' />
             </div>
             }
         
