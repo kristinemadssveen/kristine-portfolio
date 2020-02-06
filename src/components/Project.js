@@ -27,10 +27,10 @@ const Project = (props) => {
         <div className='project' >
             {
                 props.data.defaultImage &&
-                <img src={props.data.defaultImage} alt='default' onClick={ () => navigate('/projects/' + props.id)}/>
+                <img src={props.data.defaultImage} alt='default' onClick={ () => navigate(process.env.PUBLIC_URL + '/projects/' + props.id)}/>
             }
 
-            <div className='innhold' onClick={ () => navigate('/projects/' + props.id)}>
+            <div className='innhold' onClick={ () => navigate(process.env.PUBLIC_URL + '/projects/' + props.id)}>
 
                 <h1>{props.data.title}</h1>
             
@@ -50,7 +50,7 @@ const Project = (props) => {
 
                 props.signedIn &&
                 <div className='admin-icons'>
-                    <Link to={'/edit/' + props.id}>
+                    <Link to={process.env.PUBLIC_URL + '/edit/' + props.id}>
                         <FiEdit3 className='edit-icons' color='#383838' />
                     </Link>            
                     <AiOutlineDelete onClick={deleteProject} className='edit-icons' color='#383838' />

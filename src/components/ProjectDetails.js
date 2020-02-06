@@ -60,7 +60,7 @@ const ProjectDetails = (props) => {
             </div>
 
                 <p className='tilbake'>
-                    <Link to='/projects/'>Tilbake</Link>
+                    <Link to={process.env.PUBLIC_URL + '/projects/'}>Tilbake</Link>
                 </p>
             
             
