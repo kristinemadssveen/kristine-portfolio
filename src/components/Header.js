@@ -25,11 +25,11 @@ const Header = ( props ) => {
         <header className= { show ? 'visible' : '' } onClick={ () => setShow(false) }>
             
             <div>
-            <Link getProps={isPartiallyActive} to='/projects'>prosjekter</Link>
+            <Link getProps={isPartiallyActive} to={process.env.PUBLIC_URL + '/projects'}>prosjekter</Link>
             </div>
             <div className='menu2'>
-            <Link to='/contact'>kontakt</Link>
-            <Link to='/login'>
+            <Link to={process.env.PUBLIC_URL + '/contact'}>kontakt</Link>
+            <Link to={process.env.PUBLIC_URL + '/login'}>
                 {
                 props.signedIn 
                 ? 'profil'
