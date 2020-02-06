@@ -5,7 +5,6 @@
     background: #fafafa;
     display: grid;
     z-index: 2;
-    place-items: center;
 }
 
 .burger {
@@ -22,15 +21,28 @@ header {
     align-items: center;
     gap: 1rem;
     z-index: 1;
+
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 60px;
+    padding-right: 60px;
 }
 
 header a {
     text-decoration: none;
     color: #383838;
-    
+
 }
 
-[aria-current='page'], .active {
+
+.menu2 {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 2.5rem;
+}
+
+[aria-current='page'],
+.active {
     font-weight: bold;
     color: #3FEBAF;
 }
@@ -39,11 +51,17 @@ header a {
     header {
         width: 100%;
         background-color: #383838;
-        transform:translateY(-100%);
+        transform: translateY(-100%);
         grid-auto-flow: row;
         align-content: center;
+        text-align: center;
+        justify-content: center;
         min-height: 100vh;
         transition: .4s ease;
+    }
+
+    .edit-icons {
+        margin-top: 20px;
     }
 
     header a {
@@ -52,16 +70,23 @@ header a {
     }
 
     header.visible {
-        transform:translateY(0);
+        transform: translateY(0);
 
+    }
+
+    .menu2 {
+        grid-auto-flow: row;
+        gap: 1rem;
     }
 
     .burger {
         display: block;
+        width: 100%;
+        margin-top: 20px;
     }
 
     main {
         padding: 20vh 5vw;
     }
-    
+
 }

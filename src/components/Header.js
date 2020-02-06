@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import { Link } from '@reach/router'
 import './Header.css'
 import { MdMenu } from "react-icons/md"
+import { FaLinkedin } from "react-icons/fa"
 
 const Header = ( props ) => {
 
@@ -23,7 +24,10 @@ const Header = ( props ) => {
 
         <header className= { show ? 'visible' : '' } onClick={ () => setShow(false) }>
             
+            <div>
             <Link getProps={isPartiallyActive} to='/projects'>prosjekter</Link>
+            </div>
+            <div className='menu2'>
             <Link to='/contact'>kontakt</Link>
             <Link to='/login'>
                 {
@@ -32,6 +36,8 @@ const Header = ( props ) => {
                 : 'login'
                 }
             </Link>
+            <a href='https://www.linkedin.com/in/kristine-madssveen-lintorp-319a97164/' target="_blank" rel="noopener noreferrer" ><FaLinkedin className='edit-icons' color='#035A88' /></a>
+            </div>
         </header>        
         </div>
     )

@@ -29,6 +29,11 @@ main {
   transform: scale(1.5);
 }
 
+/* .heart {
+  padding-top: 40px;
+  transform: scale(1.5);
+} */
+
 button,
 .button {
   font-size: 1rem;

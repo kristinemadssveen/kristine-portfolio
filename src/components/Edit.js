@@ -16,11 +16,11 @@ const Edit = (props) => {
     }, [props.id] )
 
     const saveProject = (e) => {
-        setStatus('updating project, please hold')
+        setStatus('laster, vennligst vent')
         e.preventDefault()
         firebase.firestore().collection('projects').doc(props.id)
             .update(project)
-            .then( () => setStatus('project updated') )
+            .then( () => setStatus('prosjekt oppdatert') )
             .catch( error => {console.log( error.message )} )
     }
 
@@ -34,7 +34,7 @@ const Edit = (props) => {
         }))
     }
     const uploadStart = () => {
-        setStatus('uploading image, please hold')
+        setStatus('laster opp bilde, vennligst vent')
     }
     const uploadError = (error) => {
         setStatus(error)
@@ -55,7 +55,7 @@ const Edit = (props) => {
                     defaultImage: url
                 } ) )
             )
-            setStatus('image uploaded')
+            setStatus('bilde opplastet')
     }
 
     return(
@@ -66,16 +66,16 @@ const Edit = (props) => {
             <h1>Edit project: {project.title}</h1>
             <form onSubmit={saveProject}>
                 <input name='title' onChange={updateValue} value={project.title} />
-                <input onChange={updateValue} name='year' placeholder='Year' value={project.year} />
-                <input onChange={updateValue} name='byline' placeholder='Short description for the frontpage' value={project.byline} />
-                <textarea onChange={updateValue} name='description' value={project.description} />
+                <input onChange={updateValue} name='year' placeholder='År' value={project.year} />
+                <input onChange={updateValue} className='byline' name='byline' placeholder='Kort beskrivelse av prosjektet' value={project.byline} />
+                <textarea onChange={updateValue} name='description' placeholder='Beskriv prosjektet ditt så godt du kan her' value={project.description} />
 
                 {
                     project.defaultImage &&
                     <img src={project.defaultImage} alt='default' />
                 }
                <label>
-            <div className='button'>{project.defaultImage ? 'replace' : 'upload'}</div>
+            <div className='button'>{project.defaultImage ? 'erstatt' : 'last opp bilde'}</div>
                 <FileUploader
                     hidden
                     accept="image/*"
@@ -86,7 +86,7 @@ const Edit = (props) => {
                     onProgress={handleProgress}
                     />
                 </label>
-                <button type='submit'>save</button>
+                <button type='submit'>lagre</button>
             </form>
             </>
             }

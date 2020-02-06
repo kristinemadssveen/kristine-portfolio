@@ -4,8 +4,11 @@ import Project from './Project'
 import './Projects.css'
 import { MdAddCircleOutline } from 'react-icons/md'
 import {navigate} from '@reach/router'
-import ClipLoader from "react-spinners/ClipLoader"
+import PacmanLoader from "react-spinners/PacmanLoader"
 import Masonry from 'react-masonry-css'
+import './Om.css'
+import Om from  './Om'
+import Footer from './Footer'
 
 const Projects = (props) => {
     const [projects, setProjects] = useState([])
@@ -32,6 +35,11 @@ const Projects = (props) => {
 
     return(
         <main>
+             <Om/> 
+
+            <div className='overskrift'>
+                <h3>... div prosjekter</h3>
+            </div>
 
             {
                 props.signedIn &&
@@ -67,8 +75,10 @@ const Projects = (props) => {
                 }
             </Masonry>
             :
-            <ClipLoader />
+            <PacmanLoader color='#383838' />
             }
+
+            <Footer/>
         </main>
     )
 }

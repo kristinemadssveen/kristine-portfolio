@@ -3,16 +3,17 @@ import './Project.css'
 import { AiOutlineDelete } from "react-icons/ai"
 import { FiEdit3 } from "react-icons/fi"
 import firebase from './firebase'
-import  { Link } from '@reach/router'
+import  { Link, navigate } from '@reach/router'
+
 // import parse from 'html-react-parser'
 
 
 const Project = (props) => {
 
-    const [activeProject, setActiveProject] = useState(false)
+    const [/*activeProject, setActiveProject*/] = useState(false)
 
     const deleteProject = () => {
-        if(window.confirm('sure?')){
+        if(window.confirm('Er du sikker?')){
             firebase.firestore()
                 .collection('projects')
                 .doc(props.id)
@@ -22,40 +23,41 @@ const Project = (props) => {
         }
     }
 
-    return(                                
-        <div className='project' onClick={()=>setActiveProject(!activeProject)} className={activeProject ? 'project active' : 'project'}>
+    return(                    
+        <div className='project' >
             {
                 props.data.defaultImage &&
-                <img src={props.data.defaultImage} alt='default' />
+                <img src={props.data.defaultImage} alt='default' onClick={ () => navigate('/projects/' + props.id)}/>
             }
-            <h1>{props.data.title}</h1>
-           
-            <div className='year'>
-                {props.data.year}
 
-            </div>
+            <div className='innhold' onClick={ () => navigate('/projects/' + props.id)}>
 
-            <div className='byline'>
-                {props.data.byline}
+                <h1>{props.data.title}</h1>
+            
+                <div className='year'>
+                    {props.data.year}
 
-            </div>
+                </div>
 
-            <Link to={'/projects/' + props.id}>Read more</Link>
-           
-            {
-               props.data.color && <p>farge: {props.data.color}</p>
-            }       
+                <div className='byline'>
+                    {props.data.byline}
 
+                </div>
 
-            {
-            props.signedIn &&
-            <div className='admin-icons'>
-                <Link to={'/edit/' + props.id}>
-                    <FiEdit3 className='edit-icons' color='#383838' />
-                </Link>            
-                <AiOutlineDelete onClick={deleteProject} className='edit-icons' color='#383838' />
-            </div>
-            }
+                </div>
+
+                {
+
+                props.signedIn &&
+                <div className='admin-icons'>
+                    <Link to={'/edit/' + props.id}>
+                        <FiEdit3 className='edit-icons' color='#383838' />
+                    </Link>            
+                    <AiOutlineDelete onClick={deleteProject} className='edit-icons' color='#383838' />
+                </div>
+                }
+
+            
         
         </div>
     )

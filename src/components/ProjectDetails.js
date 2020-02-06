@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import './Project.css'
+import './ProjectDetails.css'
 import firebase from './firebase'
 import parse from 'html-react-parser'
 import  { Link } from '@reach/router'
@@ -27,34 +27,43 @@ const ProjectDetails = (props) => {
 
     return(
 
-        <main className='project-details'>
+        <main className='project-details animated fadeInRight '>
             {
                 project
                 ?
             
         <div>
-            <p>
-            <Link to='/projects/'>Tilbake</Link>
-            </p>
-
             
+            <div className='container2'>
 
-            {
-                project.defaultImage &&
-                <img src={project.defaultImage} alt='default' />
-            }
+                <div className='bilde'>
+                    {
+                        project.defaultImage && 
+                        <img src={project.defaultImage} alt='default' />
+                    }
+                </div>
 
-            <h1>{project.title}</h1>
-           
-            <div className='year'>
-                {project.year}
+                <div className='innhold'>
+                    <h1 className='navn2'>{project.title}</h1>
+                
+                    <div className='year'>
+                        {project.year}
+
+                    </div>
+
+                    <div className='description'>
+                        {project.description && parse(project.description)}
+
+                    </div>
+                </div>
 
             </div>
 
-            <div className='description'>
-                {project.description && parse(project.description)}
-
-            </div>
+                <p className='tilbake'>
+                    <Link to='/projects/'>Tilbake</Link>
+                </p>
+            
+            
     
         </div>
                 :

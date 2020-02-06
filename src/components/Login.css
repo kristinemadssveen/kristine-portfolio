@@ -12,3 +12,8 @@
     margin-bottom:1rem;
 
 }
+
+.profile{
+    display:grid;
+    place-items:center;
+}

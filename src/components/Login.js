@@ -21,11 +21,11 @@ const Login = (props) => {
         <main className='login'>
         {
             !props.signedIn &&
-            <button onClick={loginWithGoogle}>sign in</button>
+            <button onClick={loginWithGoogle}>logg inn</button>
         }
         {
             props.signedIn &&
-            <div>
+            <div className='profile'>
                 <h1>Du er logget inn på Firebase</h1>
                 <p>Velkommen {firebase.auth().currentUser.displayName}</p>
                 {

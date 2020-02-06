@@ -1,0 +1,57 @@
+main.project-details {
+    justify-content: start;
+}
+
+.tilbake {
+    padding-top: 20px;
+}
+
+.container2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
+    place-items: center;
+    
+    
+}
+
+.container2 .innhold{
+    padding: 0;
+}
+.container2 .innhold h1{
+    margin:0;
+    padding:0;
+}
+
+.container2 .bilde{
+    width:100%;
+}
+.container2 .bilde img{
+    width:100%;
+}
+
+.navn2 {
+    color: #3FEBAF;
+}
+
+.description {
+    width: 450px;
+    color: #383838;
+    line-height: 25px;
+}
+
+@media (max-width: 1200px) {
+    
+    .container2 {
+        grid-template-columns: 1fr;
+    }
+
+    .innhold {
+        margin-left: 0;
+    }
+
+}
+
+
+

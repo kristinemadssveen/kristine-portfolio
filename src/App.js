@@ -8,8 +8,6 @@ import Header from './components/Header'
 import Login from './components/Login'
 import Edit from './components/Edit'
 import firebase from './components/firebase'
-import Om from './components/Om'
-
 
 
 const Default = () => {
@@ -38,7 +36,7 @@ const App = () => {
 
       <Header signedIn={signedIn} />
 
-        <Om />
+       
       <Router>
         <Default path='/' />
         <Projects signedIn={signedIn} path='/projects' />

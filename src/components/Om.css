@@ -2,25 +2,47 @@
 
 .navn {
     color: #383838;
-    padding-top: 120px;
+    padding-top: 60px;
     padding-bottom: 70px;
     z-index: 1;
     text-align: center;
-    font-size: 23px;
+    font-size: 28px;
     font-weight: 100;
+    letter-spacing: 10px;
 }
+
+.ux-design {
+    color: rgb(255, 191, 94);
+    /* color: #e9e9e9; */
+    text-align: center;
+    font-size: 18px;
+    padding-bottom: 70px;
+}
+
 
 .mads {
     color: #3FEBAF;
 }
 
+.mads2 {
+    letter-spacing: 2px;
+    color: #3FEBAF;
+}
+
+.heartBeat {
+    animation-duration: 3s;
+    animation-delay: 2s;
+    animation-iteration-count: infinite;
+  }
+
 
 .om-meg {
-    padding-bottom: 70px;
+    padding-bottom: 100px;
     text-align: center;
     padding-left: 20rem;
     padding-right: 20rem;
     color: #383838;
+    line-height: 25px;
 }
 
 h3 {
@@ -35,5 +57,13 @@ p {
     .om-meg {
         padding-left: 4rem;
         padding-right: 4rem;
+    }
+
+    .navn {
+        font-size: 20px;
+    }
+
+    .ux-design {
+        font-size: 15px;
     }
 }

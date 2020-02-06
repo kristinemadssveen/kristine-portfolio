@@ -1,31 +1,37 @@
-input, textarea, label {
-    font-size:1rem;
-    padding:.5rem;
-    display:block;
-    margin-bottom:1rem;
+input,
+textarea,
+label {
+    font-size: 1rem;
+    padding: .5rem;
+    display: block;
+    margin-bottom: 1rem;
 }
 
-textarea{
-    min-width:60vw;
-    min-height:8rem;
+textarea {
+    min-width: 60vw;
+    min-height: 8rem;
 }
 
-.edit img{
-    width:5rem;
+
+
+.edit img {
+    width: 5rem;
 }
 
-.edit label{
-    padding:0;
+.edit label {
+    padding: 0;
 }
 
-.edit{
-    animation:slideIn .6s ease;
+.edit {
+    animation: slideIn .6s ease;
 }
-@keyframes slideIn{
-    from{
-        transform:translateX(100%);
+
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
     }
-    to{
-        transform:translateX(0);
+
+    to {
+        transform: translateX(0);
     }
 }
