@@ -13,6 +13,10 @@ import Footer from './Footer'
 const Projects = (props) => {
     const [projects, setProjects] = useState([])
 
+    useEffect(()=>{
+        if(!window.location.href.includes('projects'))navigate(process.env.PUBLIC_URL + '/projects')
+    },[])
+
     const addProject = () => {
         firebase.firestore().collection('projects').add(
             {
