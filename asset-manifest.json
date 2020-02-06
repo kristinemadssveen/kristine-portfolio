@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/kristine-portfolio/static/css/main.c535a213.chunk.css",
+    "main.js": "/kristine-portfolio/static/js/main.c9e42fda.chunk.js",
+    "main.js.map": "/kristine-portfolio/static/js/main.c9e42fda.chunk.js.map",
+    "runtime-main.js": "/kristine-portfolio/static/js/runtime-main.d3ff2b4a.js",
+    "runtime-main.js.map": "/kristine-portfolio/static/js/runtime-main.d3ff2b4a.js.map",
+    "static/js/2.2cbf7f5c.chunk.js": "/kristine-portfolio/static/js/2.2cbf7f5c.chunk.js",
+    "static/js/2.2cbf7f5c.chunk.js.map": "/kristine-portfolio/static/js/2.2cbf7f5c.chunk.js.map",
+    "index.html": "/kristine-portfolio/index.html",
+    "precache-manifest.2366110d9fbeb5f637b647ddcc41d8dd.js": "/kristine-portfolio/precache-manifest.2366110d9fbeb5f637b647ddcc41d8dd.js",
+    "service-worker.js": "/kristine-portfolio/service-worker.js",
+    "static/css/main.c535a213.chunk.css.map": "/kristine-portfolio/static/css/main.c535a213.chunk.css.map",
+    "static/js/2.2cbf7f5c.chunk.js.LICENSE": "/kristine-portfolio/static/js/2.2cbf7f5c.chunk.js.LICENSE",
+    "static/media/meg2.JPG": "/kristine-portfolio/static/media/meg2.eea68793.JPG"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.d3ff2b4a.js",
+    "static/js/2.2cbf7f5c.chunk.js",
+    "static/css/main.c535a213.chunk.css",
+    "static/js/main.c9e42fda.chunk.js"
+  ]
+}
